@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+}
+
+.nav {
+  height: 5rem;
+  background: #222;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.nav-center {
+  width: 90vw;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.hero {
+  background: linear-gradient(rgba(137, 81, 41, 1), rgba(137, 81, 41, 0.2)),
+    url("../../Images/coffee.jpg") center/cover;
+
+  min-height: calc(100vh - 5rem);
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    background: #a5612a;
+  }
+}
+.hero-center {
+  width: 90vw;
+  max-width: 1170px;
+  height: 90%;
+  margin: 0 auto;
+  padding: 5rem 0;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* border: 2px solid black; */
+  /* Helps to transform it into 50% of its own width and height */
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.header-para {
+  /* border: 2px solid red; */
+  animation: up-down 5s 1 ease-in-out forwards;
+}
+
+.hero-center h1 {
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  margin-bottom: 0.75rem;
+}
+
+.hero-center p {
+  max-width: 35em;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+}
+
+.hero-btn {
+  background: transparent;
+  color: #fff;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  border-left: 2px solid #fff;
+  border-bottom: 0.1px solid #fff;
+  text-transform: uppercase;
+  padding: 0.75rem 1.5rem;
+  letter-spacing: 2px;
+  animation: down-up 5s 1 ease-in-out forwards;
+}
+
+@keyframes up-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes down-up {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.temp {
+  min-height: 100vh;
+  background-color: bisque;
+}
